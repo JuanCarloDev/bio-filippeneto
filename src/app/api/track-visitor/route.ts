@@ -199,13 +199,8 @@ async function getIPInfo(ip: string) {
 
 export async function POST(request: NextRequest) {
   try {
-    // Só envia notificação em produção
-    if (process.env.NODE_ENV !== "production") {
-      console.log(
-        "🔧 Modo desenvolvimento - notificação de visitante não enviada"
-      );
-      return NextResponse.json({ success: true, message: "Development mode" });
-    }
+    // TEMPORÁRIO: Permitir em desenvolvimento para teste
+    console.log("🔧 Modo:", process.env.NODE_ENV);
 
     const body = await request.json();
     const {

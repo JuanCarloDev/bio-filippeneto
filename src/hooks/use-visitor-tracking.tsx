@@ -51,8 +51,12 @@ const detectHumanBehavior = (): Promise<boolean> => {
     const checkComplete = () => {
       checks++;
       if (checks >= maxChecks) {
-        // Considera humano se pontuação >= 2
-        resolve(humanBehaviorScore >= 2);
+        // Considera humano se pontuação >= 0 (muito menos rigoroso para teste)
+        console.log(
+          "🔍 Pontuação final de comportamento humano:",
+          humanBehaviorScore
+        );
+        resolve(humanBehaviorScore >= 0);
       }
     };
 
@@ -69,7 +73,7 @@ const detectHumanBehavior = (): Promise<boolean> => {
     setTimeout(() => {
       document.removeEventListener("mousemove", mouseHandler);
       checkComplete();
-    }, 3000);
+    }, 1000);
 
     // Check 2: Scroll behavior
     let scrolled = false;
@@ -84,7 +88,7 @@ const detectHumanBehavior = (): Promise<boolean> => {
     setTimeout(() => {
       document.removeEventListener("scroll", scrollHandler);
       checkComplete();
-    }, 3000);
+    }, 1000);
 
     // Check 3: Page visibility and focus
     if (!document.hidden && document.hasFocus()) {
@@ -110,8 +114,15 @@ export const useVisitorTracking = () => {
   const hasTracked = useRef(false);
 
   useEffect(() => {
+    console.log(
+      "🔍 useVisitorTracking executado - hasTracked:",
+      hasTracked.current
+    );
     // Evita múltiplas execuções
-    if (hasTracked.current) return;
+    if (hasTracked.current) {
+      console.log("🔍 Tracking já foi executado - saindo");
+      return;
+    }
 
     const trackVisitor = async () => {
       try {
@@ -125,12 +136,17 @@ export const useVisitorTracking = () => {
           return;
         }
 
-        // Verificação de comportamento humano
-        const isHuman = await detectHumanBehavior();
-        if (!isHuman) {
-          console.log("🤖 Comportamento de bot detectado - tracking ignorado");
-          return;
-        }
+        // TEMPORÁRIO: Pular detecção de comportamento para teste
+        console.log("🔧 MODO TESTE: Pulando detecção de comportamento");
+        // const isHuman = await detectHumanBehavior();
+        // console.log(
+        //   "🔍 Resultado da detecção de comportamento humano:",
+        //   isHuman
+        // );
+        // if (!isHuman) {
+        //   console.log("🤖 Comportamento de bot detectado - tracking ignorado");
+        //   return;
+        // }
 
         // Verificações adicionais de ambiente
         if (
@@ -169,7 +185,7 @@ export const useVisitorTracking = () => {
         };
 
         // Envia para a API de tracking
-        await fetch("/api/track-visitor", {
+        const response = await fetch("/api/track-visitor", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -177,14 +193,17 @@ export const useVisitorTracking = () => {
           body: JSON.stringify(visitorData),
         });
 
+        const result = await response.json();
+        console.log("📊 Resultado da API:", result);
+
         console.log("📊 Visitante humano rastreado com sucesso");
       } catch (error) {
         console.error("❌ Erro ao rastrear visitante:", error);
       }
     };
 
-    // Executa o tracking após um delay maior para permitir detecção de comportamento
-    const timeoutId = setTimeout(trackVisitor, 5000);
+    // Executa o tracking após um delay para permitir detecção de comportamento
+    const timeoutId = setTimeout(trackVisitor, 500);
 
     return () => {
       clearTimeout(timeoutId);

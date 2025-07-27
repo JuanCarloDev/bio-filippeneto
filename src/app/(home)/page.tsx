@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { MagicCard } from "@/components/ui/magic-card";
 import { cn } from "@/lib/cn";
 import { useVisitorTracking } from "@/hooks/use-visitor-tracking";
+import { useClickTracking } from "@/hooks/use-click-tracking";
 
 const LinktreePage = () => {
   const [activeSection, setActiveSection] = useState<"vendas" | "mastermind">(
@@ -20,6 +21,9 @@ const LinktreePage = () => {
 
   // Hook de tracking de visitantes
   useVisitorTracking();
+
+  // Hook de tracking de cliques
+  const { trackClick } = useClickTracking();
 
   const vendasItems = [
     {
@@ -86,8 +90,17 @@ const LinktreePage = () => {
     }, */
   ];
 
-  const handleLinkClick = (linkName: string, url: string) => {
-    // Tracking logic can be added here
+  const handleLinkClick = (
+    linkName: string,
+    url: string,
+    type: "link" | "card" | "button" = "link"
+  ) => {
+    // Tracking de cliques
+    trackClick({
+      type,
+      title: linkName,
+      url,
+    });
     console.log(`Clicked: ${linkName} -> ${url}`);
   };
 
@@ -167,7 +180,9 @@ const LinktreePage = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => handleLinkClick(social.name, social.url)}
+                  onClick={() =>
+                    handleLinkClick(social.name, social.url, "link")
+                  }
                   className="group relative"
                 >
                   <div className="w-9 h-9 rounded-full bg-white/[2%] backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 hover:bg-[#ED9A9A]/30 hover:scale-105">
@@ -232,7 +247,7 @@ const LinktreePage = () => {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => handleLinkClick(item.title, item.href)}
+                onClick={() => handleLinkClick(item.title, item.href, "card")}
                 className="block"
               >
                 <Container
