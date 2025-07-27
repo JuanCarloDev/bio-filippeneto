@@ -185,7 +185,7 @@ const LinktreePage = () => {
                     AI
                   </span>
                 </span>
-                Estratégia Digital & AI Expert
+                Estrategista Digital & AI Expert
               </span>
             </button>
           </Container>
