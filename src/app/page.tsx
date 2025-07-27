@@ -21,7 +21,7 @@ const LinktreePage = () => {
     {
       title: "Seven Sales AI",
       description: "Venda mais com IA",
-      href: "sevensales.hivetechnology.io/pt?tag=009",
+      href: "https://sevensales.hivetechnology.io/pt?tag=009",
       image: "/links/SevenSales.png",
     },
   ];
@@ -88,10 +88,10 @@ const LinktreePage = () => {
   };
 
   return (
-    <main className="min-h-screen bg-black flex flex-col">
+    <main className="flex flex-col min-h-screen bg-black">
       {/* Hero Section with Banner */}
-      <div className="relative w-full">
-        <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full lg:-mt-16">
+        <section className="relative h-[50vh] md:h-[70vh] overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
             {/* Desktop Banner */}
@@ -99,7 +99,7 @@ const LinktreePage = () => {
               src="/images/bannerdesk.png"
               alt="Banner Desktop"
               fill
-              className="hidden md:block -mt-16 object-cover max-w-7xl mx-auto object-top z-10"
+              className="hidden md:block object-cover max-w-[1400px] max-h-[600px] mx-auto object-top z-10"
               priority
             />
             {/* Mobile Banner */}
@@ -112,16 +112,17 @@ const LinktreePage = () => {
             />
 
             {/* Gradient Overlays - mantendo na posição exata */}
-            <div className="absolute inset-0 z-20 bg-gradient-to-r max-w-7xl mx-auto from-black via-transparent to-black opacity-50 lg:opacity-100" />
+            <div className="absolute inset-0 z-20 bg-gradient-to-r max-w-[1400px] max-h-[600px] mx-auto from-black via-transparent to-black opacity-50 lg:opacity-100" />
 
-            <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent from-30% via-transparent via-20% to-black to-100%" />
+            <div className="absolute inset-0 z-20 bg-gradient-to-b  max-w-[1400px] max-h-[600px] from-transparent from-30% via-transparent via-20% to-black to-100% " />
           </div>
         </section>
       </div>
 
       {/* Content Section - Agora usando overlapping responsivo */}
-      <Wrapper className="relative z-30 flex-1 xs:-mt-[calc(40vh-2rem)] -mt-[calc(40vh-3rem)] md:-mt-[calc(39vh-0rem)] lg:-mt-[calc(35vh-0rem)]">
-        <div className="text-center pb-[3rem]">
+      <Wrapper className="relative z-30">
+        <div className={` h-[13rem] lg:h-[270px]`}></div>
+        <div className="text-center pb-6">
           {/* Animated Badge */}
           <Container className="relative block overflow-hidden mb-2">
             <button className="group relative grid overflow-hidden bg-white/[0.1] rounded-full px-[5px] py-[0.6px] border border-[#ec979b2a] transition-colors duration-200 mx-auto text-[5px]">
@@ -219,39 +220,49 @@ const LinktreePage = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-1 gap-6 max-w-2xl mx-auto mb-12"
+            className="grid grid-cols-1 gap-6 max-w-2xl mx-auto mb-6"
           >
             {currentItems.map((item, index) => (
-              <Container
+              <Link
                 key={item.title}
-                delay={0.1 + index * 0.1}
-                className={cn(
-                  "relative flex flex-col max-w-[1480px] h-auto w-full rounded-2xl lg:rounded-3xl bg-[#101010] border border-border/50 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
-                )}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleLinkClick(item.title, item.href)}
+                className="block"
               >
-                <MagicCard
-                  gradientFrom="#FEF883"
-                  gradientTo="#FEA9AA"
-                  className="p-1 relative lg:rounded-3xl z-10"
-                  gradientColor="#FEA9AA10"
-                >
-                  {item.image && (
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-fill absolute top-0 left-0 rounded-2xl lg:rounded-xl z-10"
-                    />
+                <Container
+                  delay={0.1 + index * 0.1}
+                  className={cn(
+                    "relative flex flex-col max-w-[1480px] h-auto w-full rounded-2xl lg:rounded-3xl bg-[#101010] border border-border/50 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
                   )}
-                </MagicCard>
-              </Container>
+                >
+                  <MagicCard
+                    gradientFrom="#FEF883"
+                    gradientTo="#FEA9AA"
+                    className="p-1 relative lg:rounded-3xl z-10"
+                    gradientColor="#FEA9AA10"
+                  >
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-fill absolute top-0 left-0 rounded-2xl lg:rounded-xl z-10"
+                      />
+                    )}
+                  </MagicCard>
+                </Container>
+              </Link>
             ))}
           </motion.div>
         </div>
       </Wrapper>
 
-      <p className="text-center font-sans font-bold text-xs text-[#646464] py-6 mt-auto">
-        Juan Carlo © 2026 - All Right Reserved
-      </p>
+      <div className="relative page-bottom mt-auto">
+        <p className="text-center font-sans font-semibold text-xs text-[#EFA997] py-4 md:py-6">
+          Juan Carlo © 2026 - All Right Reserved
+        </p>
+      </div>
     </main>
   );
 };

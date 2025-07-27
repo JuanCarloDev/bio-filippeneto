@@ -142,7 +142,7 @@ img {
   width: 70%;
   border-radius: 100%;
   filter: blur(6rem);
-  background: rgb(85, 145, 243);
+  background: #ed9a9a;
 }
 
 .footer::before {
@@ -157,5 +157,33 @@ img {
   left: 0;
   position: absolute;
   width: 100%;
-  color: rgb(23, 23, 23);
+  color: #ed9a9a;
+}
+
+.page-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  color: #ed9a9a;
+  background: radial-gradient(
+    50% 56400% at 50% 0%,
+    #ed9a9a3c 0%,
+    rgba(169, 163, 194, 0) 100%
+  );
+}
+
+.page-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 70%;
+  border-radius: 100%;
+  filter: blur(6rem);
+  background: #ed9a9aa8;
 }

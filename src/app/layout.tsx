@@ -76,6 +76,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -98,7 +102,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background text-foreground antialiased font-heading overflow-x-hidden",
+          "bg-black min-h-screen text-foreground antialiased font-heading overflow-x-hidden",
           base.variable,
           heading.variable,
           subheading.variable
