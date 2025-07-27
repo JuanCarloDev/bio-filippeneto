@@ -88,7 +88,7 @@ const LinktreePage = () => {
   };
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black flex flex-col">
       {/* Hero Section with Banner */}
       <div className="relative w-full">
         <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
@@ -99,7 +99,7 @@ const LinktreePage = () => {
               src="/images/bannerdesk.png"
               alt="Banner Desktop"
               fill
-              className="hidden md:block object-cover max-w-7xl mx-auto object-top z-10"
+              className="hidden md:block -mt-16 object-cover max-w-7xl mx-auto object-top z-10"
               priority
             />
             {/* Mobile Banner */}
@@ -119,8 +119,8 @@ const LinktreePage = () => {
         </section>
       </div>
 
-      {/* Content Section */}
-      <Wrapper className="relative -mt-[19.5rem] md:-mt-[23.5rem] z-30">
+      {/* Content Section - Agora usando overlapping responsivo */}
+      <Wrapper className="relative z-30 flex-1 xs:-mt-[calc(40vh-2rem)] -mt-[calc(40vh-3rem)] md:-mt-[calc(39vh-0rem)] lg:-mt-[calc(35vh-0rem)]">
         <div className="text-center pb-[3rem]">
           {/* Animated Badge */}
           <Container className="relative block overflow-hidden mb-2">
@@ -248,7 +248,8 @@ const LinktreePage = () => {
           </motion.div>
         </div>
       </Wrapper>
-      <p className="text-center font-sans font-bold text-xs text-[#646464] pb-10">
+
+      <p className="text-center font-sans font-bold text-xs text-[#646464] py-6 mt-auto">
         Juan Carlo © 2026 - All Right Reserved
       </p>
     </main>
