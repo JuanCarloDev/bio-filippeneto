@@ -257,7 +257,9 @@ export async function POST(request: NextRequest) {
     const botAnalysis = analyzeVisitorData(body);
     if (botAnalysis.isBot) {
       console.log(
-        `🤖 Bot detectado para IP ${visitorInfo.ip}. Razões: ${botAnalysis.reasons.join(", ")}`
+        `🤖 Bot detectado para IP ${
+          visitorInfo.ip
+        }. Razões: ${botAnalysis.reasons.join(", ")}`
       );
       return NextResponse.json({
         success: true,
@@ -297,9 +299,13 @@ export async function POST(request: NextRequest) {
     }
 
     message +=
-      `📱 <b>Device:</b> ${visitorInfo.userAgent.includes("Mobile") ? "Mobile" : "Desktop"}\n` +
+      `📱 <b>Device:</b> ${
+        visitorInfo.userAgent.includes("Mobile") ? "Mobile" : "Desktop"
+      }\n` +
       `🔗 <b>Referrer:</b> ${visitorInfo.referrer}\n` +
-      `⏰ <b>Horário:</b> ${new Date(visitorInfo.timestamp).toLocaleString("pt-BR")}\n`;
+      `⏰ <b>Horário:</b> ${new Date(visitorInfo.timestamp).toLocaleString(
+        "pt-BR"
+      )}\n`;
 
     // Adicionar informações técnicas extras se disponíveis
     if (screenInfo) {
@@ -310,7 +316,10 @@ export async function POST(request: NextRequest) {
       message += `🌍 <b>Idioma:</b> ${browserInfo.language}\n`;
     }
 
-    message += `🌍 <b>User Agent:</b> ${visitorInfo.userAgent.substring(0, 100)}...`;
+    message += `🌍 <b>User Agent:</b> ${visitorInfo.userAgent.substring(
+      0,
+      100
+    )}...`;
 
     // Enviar notificação para o Telegram apenas para visitantes legítimos
     await SendTelegramMessage(message, TelegramGroup.JUANCARLO);

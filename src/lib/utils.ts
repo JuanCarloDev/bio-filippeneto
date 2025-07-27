@@ -14,55 +14,54 @@ export interface NotificationData {
   sessionId?: string;
 }
 
-// Telegram Configuration
-export enum TelegramGroup {
-  JUANCARLO = "JUANCARLO",
-  VR_PROJECT = "VR_PROJECT",
-  GENERAL = "GENERAL",
-}
+// Configurações do Telegram
+const CHAT_ID_PRODUCTION = "-4977721363";
+const CHAT_ID_JUANCARLO = "-4977721363"; // ID do novo grupo (você vai gerar)
+const BOT_ID = "6946151816:AAGo9-kEQs94bwaQjkdRmCz7MAp63IBM8mY";
 
-// Telegram Bot Configuration
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_IDS = {
-  [TelegramGroup.JUANCARLO]: process.env.TELEGRAM_CHAT_ID_JUANCARLO,
-  [TelegramGroup.VR_PROJECT]: process.env.TELEGRAM_CHAT_ID_VR_PROJECT,
-  [TelegramGroup.GENERAL]: process.env.TELEGRAM_CHAT_ID_GENERAL,
-};
+// Enum para facilitar seleção do grupo
+export enum TelegramGroup {
+  PRODUCTION = "production",
+  JUANCARLO = "juancarlo",
+}
 
 export async function SendTelegramMessage(
   message: string,
-  group: TelegramGroup = TelegramGroup.GENERAL
-): Promise<boolean> {
+  groupType?: TelegramGroup | string,
+  AlternativeBotId?: string
+) {
+  // Determina qual chat ID usar
+  let chatId: string = CHAT_ID_JUANCARLO; // Default para o grupo do Juan Carlo
+
+  if (groupType) {
+    if (typeof groupType === "string") {
+      if (groupType === TelegramGroup.JUANCARLO) {
+        chatId = CHAT_ID_JUANCARLO;
+      } else if (groupType === TelegramGroup.PRODUCTION) {
+        chatId = CHAT_ID_PRODUCTION;
+      } else if (groupType.startsWith("-")) {
+        // ID de chat direto
+        chatId = groupType;
+      } else {
+        chatId = CHAT_ID_JUANCARLO;
+      }
+    }
+  }
+
+  const botId = AlternativeBotId || BOT_ID;
+  const formattedMessage = message.replace(/\n/g, "%0A");
+
+  const apiUrl = `https://api.telegram.org/bot${botId}/sendMessage?chat_id=${chatId}&text=${formattedMessage}&parse_mode=HTML`;
+
   try {
-    if (!TELEGRAM_BOT_TOKEN) {
-      console.warn("TELEGRAM_BOT_TOKEN not configured");
-      return false;
-    }
-
-    const chatId = TELEGRAM_CHAT_IDS[group];
-    if (!chatId) {
-      console.warn(`Chat ID not configured for group: ${group}`);
-      return false;
-    }
-
-    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: message,
-        parse_mode: "HTML",
-        disable_web_page_preview: true,
-      }),
-    });
+    const response = await fetch(apiUrl);
 
     if (!response.ok) {
-      const errorData = await response.json();
-      console.error("Telegram API error:", errorData);
+      console.error(
+        "Telegram API error:",
+        response.status,
+        response.statusText
+      );
       return false;
     }
 
