@@ -232,14 +232,16 @@ const LinktreePage = () => {
                   <Particles
                     refresh
                     ease={80}
-                    quantity={60}
+                    quantity={30}
+                    staticity={3}
                     color="#ED9C9A"
                     className="hidden lg:block absolute inset-0 z-0"
                   />
                   <Particles
                     refresh
                     ease={80}
-                    quantity={40}
+                    quantity={10}
+                    staticity={3}
                     color="#ED9C9A"
                     className="block lg:hidden absolute inset-0 z-0"
                   />
@@ -249,46 +251,71 @@ const LinktreePage = () => {
           </motion.div>
 
           {/* Menu Cards */}
-          <motion.div
-            key={activeSection} // Força re-render com animação quando muda a seção
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-1 gap-6 max-w-2xl mx-auto mb-6"
-          >
-            {currentItems.map((item, index) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => handleLinkClick(item.title, item.href, "card")}
-                className="block"
-              >
-                <Container
-                  delay={0.1 + index * 0.1}
-                  className={cn(
-                    "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#FFFB82]/20 to-[#EE9D99]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
-                  )}
+          <div className="relative">
+            {" "}
+            <motion.div
+              key={activeSection} // Força re-render com animação quando muda a seção
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="grid grid-cols-1 gap-6 max-w-2xl mx-auto mb-6"
+            >
+              {currentItems.map((item, index) => (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => handleLinkClick(item.title, item.href, "card")}
+                  className="block"
                 >
-                  <MagicCard
-                    gradientFrom="#FEF883"
-                    gradientTo="#FEA9AA"
-                    className="p-1 relative lg:rounded-3xl z-10"
-                    gradientColor="#FEA9AA10"
-                  >
-                    {item.image && (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-full object-fill absolute top-0 left-0 rounded-lg lg:rounded-xl z-10"
-                      />
+                  <Container
+                    delay={0.1 + index * 0.1}
+                    className={cn(
+                      "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#FFFB82]/20 to-[#EE9D99]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
                     )}
-                  </MagicCard>
-                </Container>
-              </Link>
-            ))}
-          </motion.div>
+                  >
+                    <MagicCard
+                      gradientFrom="#FEF883"
+                      gradientTo="#FEA9AA"
+                      className="p-1 relative lg:rounded-3xl z-10"
+                      gradientColor="#FEA9AA10"
+                    >
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-fill absolute top-0 left-0 rounded-lg lg:rounded-xl z-10"
+                        />
+                      )}
+                    </MagicCard>
+                  </Container>
+                </Link>
+              ))}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.1 }}
+            >
+              <Particles
+                refresh
+                ease={80}
+                staticity={3}
+                quantity={40}
+                color="#ED9C9A"
+                className="hidden lg:block absolute inset-0 z-0"
+              />
+              <Particles
+                refresh
+                ease={80}
+                staticity={3}
+                quantity={50}
+                color="#ED9C9A"
+                className="block lg:hidden absolute inset-0 z-0"
+              />
+            </motion.div>
+          </div>
         </div>
       </Wrapper>
 
