@@ -13,6 +13,7 @@ import { MagicCard } from "@/components/ui/magic-card";
 import { cn } from "@/lib/cn";
 import { useVisitorTracking } from "@/hooks/use-visitor-tracking";
 import { useClickTracking } from "@/hooks/use-click-tracking";
+import Particles from "@/components/ui/particles";
 
 const LinktreePage = () => {
   const [activeSection, setActiveSection] = useState<"vendas" | "mastermind">(
@@ -165,7 +166,7 @@ const LinktreePage = () => {
             transition={{ duration: 0.8 }}
             className="mb-10"
           >
-            <h1 className="text-3xl md:text-2xl lg:text-4xl font-bold mb-1 bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-transparent bg-clip-text font-sans">
+            <h1 className="text-3xl md:text-2xl lg:text-4xl font-bold mb-1 bg-gradient-to-r from-[#FFFC82] to-[#f99d9c] text-transparent bg-clip-text font-sans">
               Juan Carlo
             </h1>
             <p className="text-base md:text-lg font-bold bg-gradient-to-r from-[#fffedb] to-[#fac1c4] text-transparent bg-clip-text max-w-2xl mx-auto mb-3">
@@ -204,7 +205,7 @@ const LinktreePage = () => {
             className=""
           >
             <div className="flex gap-2 justify-center w-full">
-              <div className="inline-flex bg-white/[0.01] backdrop-blur-md border border-white/10 rounded-2xl md:rounded-full p-1.5 mb-6 w-full max-w-2xl gap-2">
+              <div className="inline-flex bg-white/[0.01] backdrop-blur-md border border-[#EE9D99]/30 rounded-2xl md:rounded-full p-1.5 mb-6 w-full max-w-2xl gap-2">
                 <button
                   onClick={() => setActiveSection("vendas")}
                   className={cn(
@@ -220,7 +221,7 @@ const LinktreePage = () => {
                 <button
                   disabled
                   className={cn(
-                    "px-6 py-3 rounded-xl md:rounded-full  text-sm  leading-tight font-bold transition-all duration-200 w-full cursor-not-allowed opacity-60",
+                    "px-6 py-3 relative rounded-xl md:rounded-full overflow-hidden  text-sm  leading-tight font-bold transition-all duration-200 w-full cursor-not-allowed opacity-60",
                     "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text"
                   )}
                 >
@@ -228,6 +229,20 @@ const LinktreePage = () => {
                   <span className="text-xs font-bold font-regular ">
                     (em breve)
                   </span>
+                  <Particles
+                    refresh
+                    ease={80}
+                    quantity={60}
+                    color="#ED9C9A"
+                    className="hidden lg:block absolute inset-0 z-0"
+                  />
+                  <Particles
+                    refresh
+                    ease={80}
+                    quantity={40}
+                    color="#ED9C9A"
+                    className="block lg:hidden absolute inset-0 z-0"
+                  />
                 </button>
               </div>
             </div>
@@ -253,7 +268,7 @@ const LinktreePage = () => {
                 <Container
                   delay={0.1 + index * 0.1}
                   className={cn(
-                    "relative flex flex-col max-w-[1480px] h-auto w-full rounded-2xl lg:rounded-3xl bg-[#101010] border border-border/50 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
+                    "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#FFFB82]/20 to-[#EE9D99]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
                   )}
                 >
                   <MagicCard
@@ -266,7 +281,7 @@ const LinktreePage = () => {
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-full object-fill absolute top-0 left-0 rounded-2xl lg:rounded-xl z-10"
+                        className="w-full h-full object-fill absolute top-0 left-0 rounded-lg lg:rounded-xl z-10"
                       />
                     )}
                   </MagicCard>
@@ -278,7 +293,7 @@ const LinktreePage = () => {
       </Wrapper>
 
       <div className="relative page-bottom mt-auto">
-        <p className="text-center font-sans font-semibold text-xs text-[#EFA997] py-4 md:py-6">
+        <p className="text-center font-sans mb-3 font-semibold text-xs text-[#EFA997] py-4 md:py-6">
           Juan Carlo © 2026 - All Right Reserved
         </p>
       </div>
