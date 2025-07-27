@@ -1,0 +1,94 @@
+# Juan Carlo - Personal Website LLM Context
+
+## Personal Information
+- Name: Juan Carlo
+- Age: 25 years old
+- Location: Balneário Camboriú, Santa Catarina, Brazil
+- Title: Fullstack Developer, CTO & AI Solutions Expert
+- Philosophy: "Create your life as the main player"
+- Contact: juancarlo8800@gmail.com | (41) 998768-9389
+- LinkedIn: linkedin.com/in/juancarlodev
+- GitHub: github.com/JuanCarloDev
+- Website: juancarlo.com.br
+
+## Professional Profile
+Juan Carlo is a results-driven Fullstack Developer and Tech Leader with 9+ years of experience in technology, specializing in architecting scalable, high-performance web applications. He has a proven track record of driving significant business growth, including co-founding and scaling an EdTech startup from zero to $20M in revenue.
+
+### Core Expertise
+- Frontend Development: React.js (5 years), Next.js (4 years), TypeScript (4 years), Tailwind CSS (3 years)
+- Backend Development: Node.js (4 years), Express.js, Fastify, REST APIs (5 years), GraphQL (2 years)
+- AI/ML Solutions: OpenAI API (2 years), Google Gemini (1 year), Vector Databases (1 year), LangChain (1 year)
+- Languages: Portuguese (Native), English (Advanced B2)
+
+### Professional Experience
+
+#### Hive Technology - Founder, CTO & Fullstack Developer (Feb 2024 – Present)
+- Led a team of 10 professionals delivering fullstack AI solutions for international clients (USA & Japan)
+- Directed on-site technical operations in Los Angeles for project success and client satisfaction
+- Architected scalable backend systems that increased client operational efficiency by 40%
+- Generated R$740,000 in revenue in the first year
+
+#### Gonew.co - Cofounder, CTO & Fullstack Developer (Jun 2018 – Aug 2024)
+- Led all product engineering, scaling the company from 0 to $20M in revenue and 20,000+ users
+- Architected a high-impact LMS platform with AI-powered personalization and gamification features
+- Designed robust microservices architecture using Node.js to support thousands of concurrent users
+- Participated in Silicon Valley immersion program (2019) visiting Apple, LinkedIn, Google, Airbnb
+
+#### Link Informática - Apple Technical Support Specialist (Jan 2016 – Jan 2018)
+- Provided expert hardware/software support for Apple devices
+- Achieved high customer satisfaction rates
+
+### Key Achievements
+- $20M+ Revenue Scaled: Co-founded and scaled an EdTech startup
+- 3+ Companies Founded: As a technical Co-founder
+- 9+ Years in Tech: Global experience (USA, Japan)
+- Silicon Valley Immersion: Exclusive program at Google & Apple
+- Certified Private Pilot: Technical flight certification for private aircraft
+
+### Current Projects
+1. **SevenSales AI Platform**: AI-powered sales automation platform with humanized AI agents for Instagram and WhatsApp
+2. **Silicon Valley Immersion Program**: Exclusive 5-day tech immersion program
+3. **Mentorship & Consulting**: Helping entrepreneurs scale with AI and technology
+
+### Values & Mindset
+- Core Values: God, Joy, Love, Intensity, Focus, Courage
+- Continuous growth and learning
+- Elimination of ego
+- Long-term vision focus
+- Courage to reinvest in the future
+
+### Technical Skills
+- **Frontend**: TypeScript, Next.js, React, JavaScript, Tailwind CSS
+- **Backend**: Node.js, GraphQL, Microservices
+- **Databases & DevOps**: PostgreSQL, MongoDB, Docker, CI/CD
+- **AI**: OpenAI, Google Gemini, OpenRouter, Langchain
+
+### Goals & Vision
+- Financial: Building multiple revenue streams targeting R$50,000/month
+- Professional: Positioning as a reference in reconstruction and growth
+- Personal: Finding life partner, building family, spiritual growth
+- Material: Geographic freedom, Porsche 911, house near the sea
+
+### Unique Positioning
+Juan Carlo is known for his courage to reinvest R$200,000+ in his own vision, demonstrating exceptional long-term thinking and commitment to growth. His experience includes international work, team leadership during challenging times, and the ability to scale companies from zero to millions in revenue.
+
+## SEO Keywords
+fullstack developer brazil, ai solutions expert, next.js developer, react specialist, cto consultant, startup cofounder, silicon valley experience, balneário camboriú developer, ai automation, sales technology, edtech experience, international clients, revenue growth, technical leadership
+
+## Content Topics
+- Web Development & Modern Technologies
+- AI Solutions & Implementation
+- Startup Growth & Scaling
+- Technical Leadership
+- International Business Experience
+- Silicon Valley Insights
+- React & Next.js Best Practices
+- AI-Powered Sales Automation
+- EdTech Innovation
+- Career Reconstruction & Growth
+
+---
+Last Updated: January 2025
+Content Type: Personal Professional Website
+Target Audience: Potential clients, partners, employers, mentees
+Primary CTA: Contact for AI solutions, mentorship, or technical consulting 
