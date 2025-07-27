@@ -1,0 +1,258 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { Icon } from "@iconify/react";
+import Wrapper from "@/components/global/wrapper";
+import Container from "@/components/global/container";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { MagicCard } from "@/components/ui/magic-card";
+import { cn } from "@/lib/cn";
+
+const LinktreePage = () => {
+  const [activeSection, setActiveSection] = useState<"vendas" | "mastermind">(
+    "vendas"
+  );
+
+  const vendasItems = [
+    {
+      title: "Seven Sales AI",
+      description: "Venda mais com IA",
+      href: "sevensales.hivetechnology.io/pt?tag=009",
+      image: "/links/SevenSales.png",
+    },
+  ];
+
+  const mastermindItems = [
+    {
+      title: "Mastermind Exclusivo",
+      description: "Grupo seleto para empreendedores que querem escalar com IA",
+      href: "/mastermind",
+      icon: "🧠",
+      badge: "Exclusive",
+      badgeVariant: "default" as const,
+      image: undefined,
+    },
+    {
+      title: "Mentoria 1:1",
+      description: "Sessões individuais de alta performance",
+      href: "/mentoria",
+      icon: "⚡",
+      badge: "VIP",
+      badgeVariant: "secondary" as const,
+      image: undefined,
+    },
+    {
+      title: "Acesso Vitalício",
+      description: "Conteúdos e updates permanentes da comunidade",
+      href: "/acesso",
+      icon: "🔑",
+      badge: "Lifetime",
+      badgeVariant: "outline" as const,
+      image: undefined,
+    },
+  ];
+
+  const currentItems =
+    activeSection === "vendas" ? vendasItems : mastermindItems;
+
+  const socialLinks = [
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/juanncarllo",
+      icon: "mdi:instagram",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/juancarlodev/",
+      icon: "mdi:linkedin",
+    },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/@juanncarllo",
+      icon: "mdi:youtube",
+    },
+    /*  {
+      name: "Email",
+      url: "mailto:juan@example.com",
+      icon: "mdi:email",
+    }, */
+  ];
+
+  const handleLinkClick = (linkName: string, url: string) => {
+    // Tracking logic can be added here
+    console.log(`Clicked: ${linkName} -> ${url}`);
+  };
+
+  return (
+    <main className="min-h-screen bg-black">
+      {/* Hero Section with Banner */}
+      <div className="relative w-full">
+        <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            {/* Desktop Banner */}
+            <Image
+              src="/images/bannerdesk.png"
+              alt="Banner Desktop"
+              fill
+              className="hidden md:block object-cover max-w-7xl mx-auto object-top z-10"
+              priority
+            />
+            {/* Mobile Banner */}
+            <Image
+              src="/images/bannermobile.png"
+              alt="Banner Mobile"
+              fill
+              className="block md:hidden object-cover object-top z-10"
+              priority
+            />
+
+            {/* Gradient Overlays - mantendo na posição exata */}
+            <div className="absolute inset-0 z-20 bg-gradient-to-r max-w-7xl mx-auto from-black via-transparent to-black opacity-50 lg:opacity-100" />
+
+            <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent from-30% via-transparent via-20% to-black to-100%" />
+          </div>
+        </section>
+      </div>
+
+      {/* Content Section */}
+      <Wrapper className="relative -mt-[19.5rem] md:-mt-[23.5rem] z-30">
+        <div className="text-center pb-[3rem]">
+          {/* Animated Badge */}
+          <Container className="relative block overflow-hidden mb-2">
+            <button className="group relative grid overflow-hidden bg-white/[0.1] rounded-full px-[5px] py-[0.6px] border border-[#ec979b2a] transition-colors duration-200 mx-auto text-[5px]">
+              <span>
+                <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,#ec979b_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%] " />
+              </span>
+              <span className="backdrop backdrop-blur-md bg-[#3a25260b] absolute inset-[1px] rounded-full transition-colors duration-200 group-hover:bg-neutral-900" />
+              <span className="z-10 py-0.5 text-[14px] text-[#f0e0e0] flex items-center">
+                <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-[9px] mr-2 text-black font-bold">
+                  <span className="text-black font-extrabold font-sans">
+                    AI
+                  </span>
+                </span>
+                Estratégia Digital & AI Expert
+              </span>
+            </button>
+          </Container>
+
+          {/* Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-10"
+          >
+            <h1 className="text-3xl md:text-2xl lg:text-4xl font-bold mb-1 bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-transparent bg-clip-text font-sans">
+              Juan Carlo
+            </h1>
+            <p className="text-base md:text-lg font-bold bg-gradient-to-r from-[#fffedb] to-[#fac1c4] text-transparent bg-clip-text max-w-2xl mx-auto mb-3">
+              Founder x3, Software Developer & AI Engineer
+            </p>
+
+            {/* Social Links */}
+            <div className="flex justify-center gap-4 mb-8">
+              {socialLinks.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => handleLinkClick(social.name, social.url)}
+                  className="group relative"
+                >
+                  <div className="w-9 h-9 rounded-full bg-white/[2%] backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 hover:bg-[#ED9A9A]/30 hover:scale-105">
+                    <Icon
+                      icon={social.icon}
+                      className="w-5 h-5 text-[#f5f4ad]"
+                    />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Menu de Seleção */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className=""
+          >
+            <div className="flex gap-2 justify-center w-full">
+              <div className="inline-flex bg-white/[0.01] backdrop-blur-md border border-white/10 rounded-2xl md:rounded-full p-1.5 mb-6 w-full max-w-2xl gap-2">
+                <button
+                  onClick={() => setActiveSection("vendas")}
+                  className={cn(
+                    "px-6 py-3 rounded-xl md:rounded-full text-sm  leading-tight font-bold transition-all duration-200 w-full",
+                    activeSection === "vendas"
+                      ? "bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-black shadow-lg"
+                      : "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text hover:text-white hover:bg-white/5"
+                  )}
+                >
+                  Vender + com IA, <br className={`block md:hidden`} /> Design e
+                  Estratégia
+                </button>
+                <button
+                  disabled
+                  className={cn(
+                    "px-6 py-3 rounded-xl md:rounded-full  text-sm  leading-tight font-bold transition-all duration-200 w-full cursor-not-allowed opacity-60",
+                    "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text"
+                  )}
+                >
+                  Mastermind <br className={`block md:hidden`} /> Exclusivo{" "}
+                  <span className="text-xs font-bold font-regular ">
+                    (em breve)
+                  </span>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Menu Cards */}
+          <motion.div
+            key={activeSection} // Força re-render com animação quando muda a seção
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid grid-cols-1 gap-6 max-w-2xl mx-auto mb-12"
+          >
+            {currentItems.map((item, index) => (
+              <Container
+                key={item.title}
+                delay={0.1 + index * 0.1}
+                className={cn(
+                  "relative flex flex-col max-w-[1480px] h-auto w-full rounded-2xl lg:rounded-3xl bg-[#101010] border border-border/50 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
+                )}
+              >
+                <MagicCard
+                  gradientFrom="#FEF883"
+                  gradientTo="#FEA9AA"
+                  className="p-1 relative lg:rounded-3xl z-10"
+                  gradientColor="#FEA9AA10"
+                >
+                  {item.image && (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-fill absolute top-0 left-0 rounded-2xl lg:rounded-xl z-10"
+                    />
+                  )}
+                </MagicCard>
+              </Container>
+            ))}
+          </motion.div>
+        </div>
+      </Wrapper>
+      <p className="text-center font-sans font-bold text-xs text-[#646464] pb-10">
+        Juan Carlo © 2026 - All Right Reserved
+      </p>
+    </main>
+  );
+};
+
+export default LinktreePage;
