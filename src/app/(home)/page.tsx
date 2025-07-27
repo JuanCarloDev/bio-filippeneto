@@ -14,11 +14,13 @@ import { cn } from "@/lib/cn";
 import { useVisitorTracking } from "@/hooks/use-visitor-tracking";
 import { useClickTracking } from "@/hooks/use-click-tracking";
 import Particles from "@/components/ui/particles";
+import MastermindPopup from "@/components/ui/mastermind-popup";
 
 const LinktreePage = () => {
   const [activeSection, setActiveSection] = useState<"vendas" | "mastermind">(
     "vendas"
   );
+  const [isMastermindPopupOpen, setIsMastermindPopupOpen] = useState(false);
 
   // Hook de tracking de visitantes
   useVisitorTracking();
@@ -31,7 +33,28 @@ const LinktreePage = () => {
       title: "Seven Sales AI",
       description: "Venda mais com IA",
       href: "https://sevensales.hivetechnology.io/pt?tag=009",
-      image: "/links/SevenSales.png",
+      image: "/links/seven.png",
+    },
+    {
+      title: "Hive Technology",
+      description: "Soluções tecnológicas inovadoras",
+      href: "https://hivetechnology.io",
+      image: "/links/hive.png",
+    },
+    {
+      title: "Bio Links",
+      description: "Todos os meus links em um só lugar",
+      href: "https://wa.me/5541998769389?text=Ol%C3%A1%20Juan!%20Como%20fa%C3%A7o%20para%20ter%20um%20link%20na%20BIO%20desse%3F",
+      image: "/links/bio.png",
+    },
+  ];
+
+  const educacaoItems = [
+    {
+      title: "Dynamis",
+      description: "Plataforma educacional para jovens",
+      href: "https://dynamis-website-phi.vercel.app/",
+      image: "/links/dynamis.png",
     },
   ];
 
@@ -39,7 +62,7 @@ const LinktreePage = () => {
     {
       title: "Mastermind Exclusivo",
       description: "Grupo seleto para empreendedores que querem escalar com IA",
-      href: "/mastermind",
+      href: "#",
       icon: "🧠",
       badge: "Exclusive",
       badgeVariant: "default" as const,
@@ -65,8 +88,7 @@ const LinktreePage = () => {
     },
   ];
 
-  const currentItems =
-    activeSection === "vendas" ? vendasItems : mastermindItems;
+  const currentItems = vendasItems;
 
   const socialLinks = [
     {
@@ -103,6 +125,15 @@ const LinktreePage = () => {
       url,
     });
     console.log(`Clicked: ${linkName} -> ${url}`);
+  };
+
+  const handleMastermindClick = () => {
+    setIsMastermindPopupOpen(true);
+    trackClick({
+      type: "button",
+      title: "Mastermind Exclusivo",
+      url: "/mastermind",
+    });
   };
 
   return (
@@ -209,26 +240,25 @@ const LinktreePage = () => {
                 <button
                   onClick={() => setActiveSection("vendas")}
                   className={cn(
-                    "px-6 py-3 rounded-xl md:rounded-full text-sm  leading-tight font-bold transition-all duration-200 w-full",
+                    "px-6 py-3 rounded-xl md:rounded-full text-[12px] md:text-sm  leading-tight font-bold transition-all duration-200 w-full",
                     activeSection === "vendas"
                       ? "bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-black shadow-lg"
                       : "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text hover:text-white hover:bg-white/5"
                   )}
                 >
-                  Vender + com IA, <br className={`block md:hidden`} /> Design e
-                  Estratégia
+                  Produtos e Serviços, <br className={`block md:hidden`} /> IA e
+                  Tecnologia
                 </button>
                 <button
-                  disabled
+                  onClick={handleMastermindClick}
                   className={cn(
-                    "px-6 py-3 relative rounded-xl md:rounded-full overflow-hidden  text-sm  leading-tight font-bold transition-all duration-200 w-full cursor-not-allowed opacity-60",
-                    "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text"
+                    "px-6 py-3 relative rounded-xl md:rounded-full overflow-hidden text-[12px] md:text-sm leading-tight font-bold transition-all duration-200 w-full hover:scale-105",
+                    activeSection === "mastermind"
+                      ? "bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-black shadow-lg"
+                      : "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text hover:text-white hover:bg-white/5"
                   )}
                 >
-                  Mastermind <br className={`block md:hidden`} /> Exclusivo{" "}
-                  <span className="text-xs font-bold font-regular ">
-                    (em breve)
-                  </span>
+                  Mastermind <br className={`block md:hidden`} /> Exclusivo
                   <Particles
                     refresh
                     ease={80}
@@ -260,7 +290,82 @@ const LinktreePage = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="grid grid-cols-1 gap-6 max-w-2xl mx-auto mb-6"
             >
-              {currentItems.map((item, index) => (
+              {(activeSection === "vendas" ? vendasItems : mastermindItems).map(
+                (item, index) => (
+                  <div
+                    key={item.title}
+                    onClick={() => {
+                      if (item.title === "Mastermind Exclusivo") {
+                        handleMastermindClick();
+                      } else {
+                        handleLinkClick(item.title, item.href, "card");
+                        window.open(item.href, "_blank");
+                      }
+                    }}
+                    className="block cursor-pointer"
+                  >
+                    <Container
+                      delay={0.1 + index * 0.1}
+                      className={cn(
+                        "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#FFFB82]/20 to-[#EE9D99]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
+                      )}
+                    >
+                      <MagicCard
+                        gradientFrom="#FEF883"
+                        gradientTo="#FEA9AA"
+                        className="p-1 relative lg:rounded-3xl z-10"
+                        gradientColor="#FEA9AA10"
+                      >
+                        {item.image && (
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-fill absolute top-0 left-0 rounded-lg lg:rounded-xl z-10"
+                          />
+                        )}
+                      </MagicCard>
+                    </Container>
+                  </div>
+                )
+              )}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.1 }}
+            >
+              <Particles
+                refresh
+                ease={80}
+                staticity={3}
+                quantity={40}
+                color="#ED9C9A"
+                className="hidden lg:block absolute inset-0 z-0"
+              />
+              <Particles
+                refresh
+                ease={80}
+                staticity={3}
+                quantity={50}
+                color="#ED9C9A"
+                className="block lg:hidden absolute inset-0 z-0"
+              />
+            </motion.div>
+          </div>
+
+          {/* Seção Educação para jovens */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mt-12 mb-8"
+          >
+            <h2 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-[#FFFC82] to-[#f99d9c] text-transparent bg-clip-text text-center">
+              Educação para jovens
+            </h2>
+
+            <div className="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
+              {educacaoItems.map((item, index) => (
                 <Link
                   key={item.title}
                   href={item.href}
@@ -292,30 +397,8 @@ const LinktreePage = () => {
                   </Container>
                 </Link>
               ))}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.1 }}
-            >
-              <Particles
-                refresh
-                ease={80}
-                staticity={3}
-                quantity={40}
-                color="#ED9C9A"
-                className="hidden lg:block absolute inset-0 z-0"
-              />
-              <Particles
-                refresh
-                ease={80}
-                staticity={3}
-                quantity={50}
-                color="#ED9C9A"
-                className="block lg:hidden absolute inset-0 z-0"
-              />
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </Wrapper>
 
@@ -324,6 +407,12 @@ const LinktreePage = () => {
           Juan Carlo © 2026 - All Right Reserved
         </p>
       </div>
+
+      {/* Mastermind Popup */}
+      <MastermindPopup
+        isOpen={isMastermindPopupOpen}
+        onClose={() => setIsMastermindPopupOpen(false)}
+      />
     </main>
   );
 };
