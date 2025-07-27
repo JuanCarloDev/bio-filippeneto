@@ -11,11 +11,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MagicCard } from "@/components/ui/magic-card";
 import { cn } from "@/lib/cn";
+import { useVisitorTracking } from "@/hooks/use-visitor-tracking";
 
 const LinktreePage = () => {
   const [activeSection, setActiveSection] = useState<"vendas" | "mastermind">(
     "vendas"
   );
+
+  // Hook de tracking de visitantes
+  useVisitorTracking();
 
   const vendasItems = [
     {

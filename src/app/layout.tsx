@@ -4,6 +4,8 @@ import { generateMetadata } from "@/utils";
 import { base, heading } from "@/constants";
 import { Toaster } from "@/components/ui/sonner";
 import { subheading } from "@/constants/fonts";
+import GoogleAnalytics from "@/utils/GoogleAnalytics";
+import FacebookPixel from "@/utils/FacebookPixel";
 
 export const metadata = generateMetadata();
 
@@ -109,6 +111,8 @@ export default function RootLayout({
         )}
       >
         <Toaster richColors theme="dark" position="top-right" />
+        <GoogleAnalytics />
+        <FacebookPixel />
         {children}
       </body>
     </html>
