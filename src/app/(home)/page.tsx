@@ -280,6 +280,51 @@ const LinktreePage = () => {
             </div>
           </motion.div>
 
+          {/* Botão Call Estratégica */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mb-8"
+          >
+            <button
+              onClick={() => {
+                handleLinkClick(
+                  "Agendar Call Estratégica",
+                  "https://calendly.com/juancarlo8800/call-estrategica",
+                  "button"
+                );
+                window.open(
+                  "https://calendly.com/juancarlo8800/call-estrategica",
+                  "_blank"
+                );
+              }}
+              className="relative group w-full max-w-2xl mx-auto block"
+            >
+              <div className="relative overflow-hidden bg-gradient-to-r from-[#FFFC82] to-[#ec979b] p-[1px] rounded-xl hover:scale-[102%] transition-all duration-300">
+                <div className="bg-black rounded-xl px-6 py-3 relative overflow-hidden">
+                  <div className="flex items-center justify-center gap-3 relative z-10">
+                    <Icon
+                      icon="logos:google-calendar"
+                      className="w-5 h-5 text-[#f5f4ad]"
+                    />
+                    <span className="text-sm font-bold text-white">
+                      Agendar Call Estratégica
+                    </span>
+                  </div>
+                  <Particles
+                    refresh
+                    ease={80}
+                    quantity={15}
+                    staticity={3}
+                    color="#ED9C9A"
+                    className="absolute inset-0 z-0"
+                  />
+                </div>
+              </div>
+            </button>
+          </motion.div>
+
           {/* Menu Cards */}
           <div className="relative">
             {" "}

@@ -9,7 +9,7 @@ interface Props {
 const MarketingLayout = ({ children }: Props) => {
   return (
     <>
-      <main className="mx-auto w-full z-40 relative">{children}</main>
+      <main className="mx-auto h-fit w-full z-40 relative">{children}</main>
     </>
   );
 };
