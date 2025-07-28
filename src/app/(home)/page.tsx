@@ -38,13 +38,13 @@ const LinktreePage = () => {
     {
       title: "Hive Technology",
       description: "Soluções tecnológicas inovadoras",
-      href: "https://hivetechnology.io",
+      href: "https://calendly.com/juancarlo8800/call-estrategica",
       image: "/links/hive.png",
     },
     {
       title: "Bio Links",
       description: "Todos os meus links em um só lugar",
-      href: "https://wa.me/5541998769389?text=Ol%C3%A1%20Juan!%20Como%20fa%C3%A7o%20para%20ter%20um%20link%20na%20BIO%20desse%3F",
+      href: "https://calendly.com/juancarlo8800/call-estrategicaF",
       image: "/links/bio.png",
     },
   ];
