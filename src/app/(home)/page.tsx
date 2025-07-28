@@ -44,7 +44,7 @@ const LinktreePage = () => {
     {
       title: "Bio Links",
       description: "Todos os meus links em um só lugar",
-      href: "https://calendly.com/juancarlo8800/call-estrategicaF",
+      href: "https://calendly.com/juancarlo8800/call-estrategica",
       image: "/links/bio.png",
     },
   ];
