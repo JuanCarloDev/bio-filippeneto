@@ -53,7 +53,7 @@ const LinktreePage = () => {
     {
       title: "Dynamis",
       description: "Plataforma educacional para jovens",
-      href: "https://dynamis-website-phi.vercel.app/",
+      href: "https://www.dynamiseducacao.com.br/",
       image: "/links/dynamis.png",
     },
   ];
