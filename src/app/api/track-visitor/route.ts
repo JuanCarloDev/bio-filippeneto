@@ -3,7 +3,7 @@ import { SendTelegramMessage, TelegramGroup } from "@/lib/utils";
 
 // Lista de IPs bloqueados para evitar spam
 const DEFAULT_BLOCKED_IPS = [
-  "189.40.70.175", // IP do Juan Carlo - removido para evitar spam
+  "189.40.70.175", // IP do Filippe Neto - removido para evitar spam
   "191.177.160.44", // IP adicional bloqueado
 ];
 
@@ -275,7 +275,7 @@ export async function POST(request: NextRequest) {
 
     // Criar mensagem para o Telegram com informações de localização
     let message =
-      `<b>👀 Novo Visitante - Juan Carlo AI</b>\n\n` +
+      `<b>👀 Novo Visitante - Filippe Neto AI</b>\n\n` +
       `🌐 <b>IP:</b> ${visitorInfo.ip}\n`;
 
     // Adicionar informações de localização se disponíveis
@@ -317,7 +317,7 @@ export async function POST(request: NextRequest) {
     )}...`;
 
     // Enviar notificação para o Telegram apenas para visitantes legítimos
-    await SendTelegramMessage(message, TelegramGroup.JUANCARLO);
+    /*     await SendTelegramMessage(message, TelegramGroup.FILIPPENETO); */
 
     console.log("✅ Notificação de visitante legítimo enviada para o Telegram");
 

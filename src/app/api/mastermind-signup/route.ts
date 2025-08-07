@@ -21,12 +21,12 @@ export async function POST(request: NextRequest) {
 👤 <b>Nome:</b> ${nome}
 📱 <b>WhatsApp:</b> ${whatsapp}
 ⏰ <b>Data/Hora:</b> ${new Date().toLocaleString("pt-BR")}
-🌐 <b>Fonte:</b> Linktree Juan Carlo
+🌐 <b>Fonte:</b> Linktree Filippe Neto
     `;
 
     const result = await SendTelegramMessage(
       message.trim(),
-      TelegramGroup.JUANCARLO
+      TelegramGroup.FILIPPENETO
     );
 
     if (result) {

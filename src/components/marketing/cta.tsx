@@ -15,14 +15,14 @@ const CTA = () => {
             refresh
             ease={80}
             quantity={80}
-            color="#d4d4d4"
+            color="#9aceed"
             className="hidden lg:block absolute inset-0 z-0"
           />
           <Particles
             refresh
             ease={80}
             quantity={35}
-            color="#d4d4d4"
+            color="#9aceed"
             className="block lg:hidden absolute inset-0 z-0"
           />
 

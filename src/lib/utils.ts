@@ -16,13 +16,13 @@ export interface NotificationData {
 
 // Configurações do Telegram
 const CHAT_ID_PRODUCTION = "-4977721363";
-const CHAT_ID_JUANCARLO = "-4977721363"; // ID do novo grupo (você vai gerar)
+const CHAT_ID_FILIPPENETO = "-4977721363"; // ID do novo grupo do Filippe Neto
 const BOT_ID = "6946151816:AAGo9-kEQs94bwaQjkdRmCz7MAp63IBM8mY";
 
 // Enum para facilitar seleção do grupo
 export enum TelegramGroup {
   PRODUCTION = "production",
-  JUANCARLO = "juancarlo",
+  FILIPPENETO = "filippeneto",
 }
 
 export async function SendTelegramMessage(
@@ -31,19 +31,19 @@ export async function SendTelegramMessage(
   AlternativeBotId?: string
 ) {
   // Determina qual chat ID usar
-  let chatId: string = CHAT_ID_JUANCARLO; // Default para o grupo do Juan Carlo
+  let chatId: string = CHAT_ID_FILIPPENETO; // Default para o grupo do Filippe Neto
 
   if (groupType) {
     if (typeof groupType === "string") {
-      if (groupType === TelegramGroup.JUANCARLO) {
-        chatId = CHAT_ID_JUANCARLO;
+      if (groupType === TelegramGroup.FILIPPENETO) {
+        chatId = CHAT_ID_FILIPPENETO;
       } else if (groupType === TelegramGroup.PRODUCTION) {
         chatId = CHAT_ID_PRODUCTION;
       } else if (groupType.startsWith("-")) {
         // ID de chat direto
         chatId = groupType;
       } else {
-        chatId = CHAT_ID_JUANCARLO;
+        chatId = CHAT_ID_FILIPPENETO;
       }
     }
   }

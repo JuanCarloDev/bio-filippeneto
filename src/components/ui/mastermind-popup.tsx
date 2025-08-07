@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 interface MastermindPopupProps {
   isOpen: boolean;
@@ -16,6 +17,7 @@ export default function MastermindPopup({
 }: MastermindPopupProps) {
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
+  const [instagram, setInstagram] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -36,7 +38,7 @@ export default function MastermindPopup({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!nome.trim() || !whatsapp.trim()) {
+    if (!nome.trim() || !whatsapp.trim() || !instagram.trim()) {
       alert("Por favor, preencha todos os campos");
       return;
     }
@@ -44,12 +46,16 @@ export default function MastermindPopup({
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/mastermind-signup", {
+      const response = await fetch("/api/google-sheets", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ nome: nome.trim(), whatsapp: whatsapp.trim() }),
+        body: JSON.stringify({
+          nome: nome.trim(),
+          whatsapp: whatsapp.trim(),
+          instagram: instagram.trim(),
+        }),
       });
 
       const data = await response.json();
@@ -61,6 +67,7 @@ export default function MastermindPopup({
           setIsSuccess(false);
           setNome("");
           setWhatsapp("");
+          setInstagram("");
         }, 3000);
       } else {
         alert("Erro ao enviar inscrição. Tente novamente.");
@@ -78,6 +85,7 @@ export default function MastermindPopup({
       onClose();
       setNome("");
       setWhatsapp("");
+      setInstagram("");
       setIsSuccess(false);
     }
   };
@@ -96,14 +104,14 @@ export default function MastermindPopup({
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="relative w-full max-w-md bg-gradient-to-br from-[#1a1a1a]/90 to-[#2a2a2a]/80 backdrop-blur-[300px] rounded-2xl p-6 border border-[#EE9D99]/30 shadow-2xl"
+            className="relative w-full max-w-md bg-black/[50%] backdrop-blur-2xl rounded-2xl p-6 border border-[#8CDDFA]/30 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={handleClose}
               disabled={isLoading}
-              className="absolute top-4 right-4 text-[#EE9D99] hover:text-white transition-colors disabled:opacity-50"
+              className="absolute top-4 right-4 text-[#8CDDFA] hover:text-white transition-colors disabled:opacity-50"
             >
               <Icon icon="mdi:close" className="w-6 h-6" />
             </button>
@@ -112,22 +120,30 @@ export default function MastermindPopup({
               <>
                 {/* Header */}
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-white/[3%] rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🧠</span>
+                  <div className="mx-auto mt-10 mb-5 flex items-center justify-center relative">
+                    <div className={`max-w-[300px]`}>
+                      <Image
+                        className={`w-[200px] h-auto`}
+                        src="/icons/avozquevendesite.webp"
+                        alt="A VOZ QUE VENDE"
+                        width={200}
+                        height={50}
+                      />
+                    </div>
                   </div>
-                  <h2 className="text-xl font-bold bg-gradient-to-r from-[#FFFC82] to-[#f99d9c] text-transparent bg-clip-text mb-2">
-                    Mastermind Exclusivo
+                  <h2 className="text-xl font-bold bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-transparent bg-clip-text mb-2">
+                    Mentoria A Voz Que Vende
                   </h2>
-                  <p className="text-sm text-[#f5f4ad] max-w-[350px] mx-auto">
-                    Grupo seleto para empreendedores que querem escalar com IA,
-                    tecnologia, estratégia e networking.
+                  <p className="text-sm text-[#8CDDFA]/80 max-w-[350px] mx-auto">
+                    Transforme sua voz em uma máquina de vendas diária.
+                    Destravar sua voz é o primeiro passo para o sucesso!
                   </p>
                 </div>
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-[#f5f4ad] mb-2">
+                    <label className="block text-sm font-medium text-[#8CDDFA]/80 mb-2">
                       Nome completo
                     </label>
                     <input
@@ -135,14 +151,14 @@ export default function MastermindPopup({
                       value={nome}
                       onChange={(e) => setNome(e.target.value)}
                       disabled={isLoading}
-                      className="w-full px-4 py-3 bg-white/[0.05] border border-[#EE9D99]/30 rounded-lg text-white placeholder-[#f5f4ad]/50 focus:outline-none focus:border-[#FFFC82] transition-colors disabled:opacity-50"
+                      className="w-full px-4 py-3 bg-white/[0.05] border border-[#8CDDFA]/30 rounded-lg text-white placeholder-[#8CDDFA]/50 focus:outline-none focus:border-[#DCF6FD] transition-colors disabled:opacity-50"
                       placeholder="Digite seu nome completo"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#f5f4ad] mb-2">
+                    <label className="block text-sm font-medium text-[#8CDDFA]/80 mb-2">
                       WhatsApp
                     </label>
                     <input
@@ -150,8 +166,23 @@ export default function MastermindPopup({
                       value={whatsapp}
                       onChange={(e) => setWhatsapp(e.target.value)}
                       disabled={isLoading}
-                      className="w-full px-4 py-3 bg-white/[0.05] border border-[#EE9D99]/30 rounded-lg text-white placeholder-[#f5f4ad]/50 focus:outline-none focus:border-[#FFFC82] transition-colors disabled:opacity-50"
+                      className="w-full px-4 py-3 bg-white/[0.05] border border-[#8CDDFA]/30 rounded-lg text-white placeholder-[#8CDDFA]/50 focus:outline-none focus:border-[#DCF6FD] transition-colors disabled:opacity-50"
                       placeholder="(11) 99999-9999"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-[#8CDDFA]/80 mb-2">
+                      Instagram
+                    </label>
+                    <input
+                      type="text"
+                      value={instagram}
+                      onChange={(e) => setInstagram(e.target.value)}
+                      disabled={isLoading}
+                      className="w-full px-4 py-3 bg-white/[0.05] border border-[#8CDDFA]/30 rounded-lg text-white placeholder-[#8CDDFA]/50 focus:outline-none focus:border-[#DCF6FD] transition-colors disabled:opacity-50"
+                      placeholder="@seuinstagram"
                       required
                     />
                   </div>
@@ -159,7 +190,7 @@ export default function MastermindPopup({
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-black font-bold py-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+                    className="w-full bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-black font-bold py-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
                   >
                     {isLoading ? (
                       <div className="flex items-center gap-2">
@@ -170,7 +201,7 @@ export default function MastermindPopup({
                         Enviando...
                       </div>
                     ) : (
-                      "Quero participar!"
+                      "Quero destravar minha voz!"
                     )}
                   </Button>
                 </form>
@@ -178,11 +209,13 @@ export default function MastermindPopup({
             ) : (
               /* Success Message */
               <div className="text-center py-8">
-                <div className="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
-                  <Icon icon="mdi:check" className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] rounded-full flex items-center justify-center">
+                  <Icon icon="mdi:check" className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Bora!</h3>
-                <p className="text-[#f5f4ad]">
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Vamos destravar sua voz!
+                </h3>
+                <p className="text-[#8CDDFA]/80">
                   Sua inscrição foi enviada com sucesso.
                 </p>
               </div>

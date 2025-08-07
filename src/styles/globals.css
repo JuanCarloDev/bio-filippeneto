@@ -82,7 +82,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ed9b9a;
+  background: #a3ceff;
   border-radius: 10px;
 }
 
@@ -142,7 +142,7 @@ img {
   width: 70%;
   border-radius: 100%;
   filter: blur(6rem);
-  background: #ed9a9a;
+  background: #9aceed;
 }
 
 .footer::before {
@@ -157,7 +157,7 @@ img {
   left: 0;
   position: absolute;
   width: 100%;
-  color: #ed9a9a;
+  color: #9aceed;
 }
 
 .page-bottom::before {
@@ -167,10 +167,10 @@ img {
   left: 0;
   height: 1px;
   width: 100%;
-  color: #ed9a9a;
+  color: #9aceed;
   background: radial-gradient(
     50% 56400% at 50% 0%,
-    #ed9a9a9a 0%,
+    #9aceed 0%,
     rgba(169, 163, 194, 0) 100%
   );
 }
@@ -185,5 +185,5 @@ img {
   width: 70%;
   border-radius: 100%;
   filter: blur(6rem);
-  background: #ed9a9aa8;
+  background: #9aceed;
 }

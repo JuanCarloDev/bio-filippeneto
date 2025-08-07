@@ -53,8 +53,8 @@ User-agent: MJ12bot
 Disallow: /
 
 # Important files
-Sitemap: https://juancarlo.com.br/sitemap.xml
-Sitemap: https://juancarlo.com.br/llm.txt
+Sitemap: https://filippneto.com.br/sitemap.xml
+Sitemap: https://filippneto.com.br/llm.txt
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1 

@@ -12,61 +12,61 @@ export const metadata = generateMetadata();
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://juancarlo.com.br/#person",
-  name: "Juan Carlo",
-  alternateName: "Juan Carlo",
+  "@id": "https://filippneto.com.br/#person",
+  name: "Filippe Neto",
+  alternateName: "Filippe Neto",
   description:
-    "Fullstack Developer and CTO with 9+ years of experience. Co-founder who scaled startups from 0 to $20M revenue. Expert in React, Next.js, AI solutions, and international team leadership.",
-  url: "https://juancarlo.com.br",
+    "Líder visionário em marketing e vendas com 17+ anos de experiência. Transformou 1700+ vozes em máquinas de vendas. Mentor, palestrante e especialista em comunicação que converte.",
+  url: "https://filippneto.com.br",
   image: {
     "@type": "ImageObject",
-    url: "https://juancarlo.com.br/images/juan-carlo-profile.jpg",
+    url: "/metaimage.jpg",
     width: 800,
     height: 800,
   },
-  jobTitle: "Fullstack Developer & AI Solutions Expert",
+  jobTitle: "Mentor A Voz Que Vende | Líder em Marketing e Vendas",
   worksFor: {
     "@type": "Organization",
-    name: "Hive Technology",
-    url: "https://hivetechnology.io",
+    name: "Labellamafia",
+    url: "https://labellamafia.com.br",
   },
-  email: "juancarlo8800@gmail.com",
-  telephone: "+55-41-998768-9389",
+  email: "contato@filippneto.com.br",
+  telephone: "+55-47-99999-9999",
   sameAs: [
-    "https://linkedin.com/in/juancarlodev",
-    "https://github.com/JuanCarloDev",
-    "https://instagram.com/juanncarllo",
-    "https://youtube.com/@juanncarllo",
+    "https://linkedin.com/in/filippeneto",
+    "https://instagram.com/filippeneto.oficial",
+    "https://youtube.com/@filippeneto",
   ],
   knowsAbout: [
-    "React.js",
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "Artificial Intelligence",
-    "Fullstack Development",
-    "Startup Scaling",
-    "Technical Leadership",
-    "AI Solutions",
-    "Sales Automation",
+    "Marketing de Guerrilha",
+    "Branding",
+    "Comunicação Persuasiva",
+    "Estratégia de Vendas",
+    "Liderança de Equipes",
+    "Transformação Digital",
+    "Posicionamento Digital",
+    "CRM e Automação",
+    "Mentoria Empresarial",
+    "Crescimento de Negócios",
   ],
   hasOccupation: {
     "@type": "Occupation",
-    name: "Software Developer",
+    name: "Mentor e Líder em Marketing e Vendas",
     description:
-      "Fullstack Developer specializing in React, Next.js, and AI solutions with experience scaling startups to millions in revenue.",
+      "Líder visionário especializado em transformar comunicação em vendas, com experiência revolucionando empresas e desenvolvendo talentos em marketing e vendas.",
   },
   founder: [
     {
       "@type": "Organization",
-      name: "Hive Technology",
-      description: "Software development company specializing in AI solutions",
+      name: "Consig Summit",
+      description: "Segundo maior evento financeiro do mundo",
     },
   ],
   alumniOf: {
     "@type": "Organization",
-    name: "Gonew.co",
-    description: "EdTech startup scaled from 0 to $20M revenue",
+    name: "Fontes Promotora",
+    description:
+      "Revolucionou e tornou a empresa a maior do país em crédito consignado",
   },
 };
 
@@ -88,7 +88,7 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData),
           }}
         />
-        <link rel="canonical" href="https://juancarlo.com.br" />
+        <link rel="canonical" href="https://filippneto.com.br" />
         <meta
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -111,8 +111,8 @@ export default function RootLayout({
         )}
       >
         <Toaster richColors theme="dark" position="top-right" />
-        <GoogleAnalytics />
-        <FacebookPixel />
+        {/*   <GoogleAnalytics />
+        <FacebookPixel /> */}
         {children}
       </body>
     </html>

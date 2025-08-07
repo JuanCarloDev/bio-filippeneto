@@ -4,7 +4,7 @@ import { SendTelegramMessage, TelegramGroup } from "@/lib/utils";
 export async function GET() {
   try {
     const testMessage = `
-<b>🧪 Teste de Mensagem - Juan Carlo AI</b>
+<b>🧪 Teste de Mensagem - Filippe Neto AI</b>
 
 📍 Esta é uma mensagem de teste para verificar se o sistema está funcionando.
 ⏰ <b>Horário:</b> ${new Date().toLocaleString("pt-BR")}
@@ -13,7 +13,7 @@ export async function GET() {
 
     const result = await SendTelegramMessage(
       testMessage.trim(),
-      TelegramGroup.JUANCARLO
+      TelegramGroup.FILIPPENETO
     );
 
     if (result) {

@@ -30,23 +30,29 @@ const LinktreePage = () => {
 
   const vendasItems = [
     {
+      title: "A Voz Que Vende",
+      description: "Venda mais com IA",
+      href: "https://www.vozquevende.com.br/",
+      image: "/links/voz2.png",
+    },
+    {
       title: "Seven Sales AI",
       description: "Venda mais com IA",
       href: "https://sevensales.hivetechnology.io/pt?tag=009",
       image: "/links/seven.png",
     },
-    {
+    /*      {
       title: "Hive Technology",
       description: "Soluções tecnológicas inovadoras",
-      href: "https://calendly.com/juancarlo8800/call-estrategica",
+      href: "https://calendly.com/filippeneto/call-estrategica",
       image: "/links/hive.png",
     },
     {
       title: "Bio Links",
       description: "Todos os meus links em um só lugar",
-      href: "https://calendly.com/juancarlo8800/call-estrategica",
+      href: "https://calendly.com/filippeneto/call-estrategica",
       image: "/links/bio.png",
-    },
+    }, */
   ];
 
   const educacaoItems = [
@@ -93,19 +99,19 @@ const LinktreePage = () => {
   const socialLinks = [
     {
       name: "Instagram",
-      url: "https://www.instagram.com/juanncarllo",
+      url: "https://www.instagram.com/filippeneto.oficial",
       icon: "mdi:instagram",
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/juancarlodev/",
+      url: "https://www.linkedin.com/in/filippe-neto/",
       icon: "mdi:linkedin",
     },
-    {
+    /* {
       name: "YouTube",
-      url: "https://www.youtube.com/@juanncarllo",
+      url: "https://www.youtube.com/@filippeneto",
       icon: "mdi:youtube",
-    },
+    }, */
     /*  {
       name: "Email",
       url: "mailto:juan@example.com",
@@ -139,7 +145,7 @@ const LinktreePage = () => {
   return (
     <main className="flex flex-col min-h-screen bg-black">
       {/* Hero Section with Banner */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full lg:-mt-16">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full -mt-10 lg:-mt-16">
         <section className="relative h-[50vh] md:h-[70vh] overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
@@ -156,7 +162,7 @@ const LinktreePage = () => {
               src="/images/bannermobile.png"
               alt="Banner Mobile"
               fill
-              className="block md:hidden object-cover object-top z-10"
+              className="block md:hidden h-full w-full object-cover object-top z-10"
               priority
             />
 
@@ -170,22 +176,22 @@ const LinktreePage = () => {
 
       {/* Content Section - Agora usando overlapping responsivo */}
       <Wrapper className="relative z-30">
-        <div className={` h-[13rem] lg:h-[270px]`}></div>
+        <div className={` h-[17rem] lg:h-[300px]`}></div>
         <div className="text-center pb-6">
           {/* Animated Badge */}
           <Container className="relative block overflow-hidden mb-2">
             <button className="group relative grid overflow-hidden bg-white/[0.1] rounded-full px-[5px] py-[0.6px] border border-[#ec979b2a] transition-colors duration-200 mx-auto text-[5px]">
               <span>
-                <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,#ec979b_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%] " />
+                <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,#DCF6FD_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%] " />
               </span>
               <span className="backdrop backdrop-blur-md bg-[#3a25260b] absolute inset-[1px] rounded-full transition-colors duration-200 group-hover:bg-neutral-900" />
-              <span className="z-10 py-0.5 text-[14px] text-[#f0e0e0] flex items-center">
-                <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-[9px] mr-2 text-black font-bold">
+              <span className="z-10 py-0.5 text-[14px] text-[#9aceed] flex items-center font-semibold">
+                <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-[#DCF6FD] to-[#DCF6FD] text-[9px] mr-2 text-black font-bold">
                   <span className="text-black font-extrabold font-sans">
-                    AI
+                    Mentor
                   </span>
                 </span>
-                Estrategista Digital & AI Expert
+                + 1700 vozes Libertadas
               </span>
             </button>
           </Container>
@@ -197,11 +203,11 @@ const LinktreePage = () => {
             transition={{ duration: 0.8 }}
             className="mb-10"
           >
-            <h1 className="text-3xl md:text-2xl lg:text-4xl font-bold mb-1 bg-gradient-to-r from-[#FFFC82] to-[#f99d9c] text-transparent bg-clip-text font-sans">
-              Juan Carlo
+            <h1 className="text-3xl md:text-2xl lg:text-4xl font-bold mb-1 bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-transparent bg-clip-text font-sans">
+              Filippe Neto
             </h1>
-            <p className="text-base md:text-lg font-bold bg-gradient-to-r from-[#fffedb] to-[#fac1c4] text-transparent bg-clip-text max-w-2xl mx-auto mb-3">
-              Founder x3, Software Developer & AI Engineer
+            <p className="text-sm md:text-lg font-bold bg-gradient-to-r from-[#E0EBEF]/70 to-[#8CDDFA]/40 text-transparent bg-clip-text max-w-2xl mx-auto mb-3">
+              Transformo sua VOZ em uma máquina de venda diária
             </p>
 
             {/* Social Links */}
@@ -220,7 +226,7 @@ const LinktreePage = () => {
                   <div className="w-9 h-9 rounded-full bg-white/[2%] backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 hover:bg-[#ED9A9A]/30 hover:scale-105">
                     <Icon
                       icon={social.icon}
-                      className="w-5 h-5 text-[#f5f4ad]"
+                      className="w-5 h-5 text-[#DCF6FD]"
                     />
                   </div>
                 </Link>
@@ -236,35 +242,34 @@ const LinktreePage = () => {
             className=""
           >
             <div className="flex gap-2 justify-center w-full">
-              <div className="inline-flex bg-white/[0.01] backdrop-blur-md border border-[#EE9D99]/30 rounded-2xl md:rounded-full p-1.5 mb-6 w-full max-w-2xl gap-2">
+              <div className="inline-flex bg-white/[0.01] backdrop-blur-md border border-[#8CDDFA]/30 rounded-2xl md:rounded-full p-1.5 mb-6 w-full max-w-2xl gap-2">
                 <button
                   onClick={() => setActiveSection("vendas")}
                   className={cn(
                     "px-6 py-3 rounded-xl md:rounded-full text-[12px] md:text-sm  leading-tight font-bold transition-all duration-200 w-full",
                     activeSection === "vendas"
-                      ? "bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-black shadow-lg"
-                      : "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text hover:text-white hover:bg-white/5"
+                      ? "bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-black shadow-lg"
+                      : "bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-transparent bg-clip-text hover:text-white hover:bg-white/5"
                   )}
                 >
-                  Produtos e Serviços, <br className={`block md:hidden`} /> IA e
-                  Tecnologia
+                  Imersões, Eventos & Palestras
                 </button>
                 <button
                   onClick={handleMastermindClick}
                   className={cn(
                     "px-6 py-3 relative rounded-xl md:rounded-full overflow-hidden text-[12px] md:text-sm leading-tight font-bold transition-all duration-200 w-full hover:scale-105",
                     activeSection === "mastermind"
-                      ? "bg-gradient-to-r from-[#FFFC82] to-[#ec979b] text-black shadow-lg"
-                      : "bg-gradient-to-r from-[#fffeaf] to-[#f4a7ab] text-transparent bg-clip-text hover:text-white hover:bg-white/5"
+                      ? "bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-black shadow-lg"
+                      : "bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-transparent bg-clip-text hover:text-white hover:bg-white/5"
                   )}
                 >
-                  Mastermind <br className={`block md:hidden`} /> Exclusivo
+                  Mentoria A Voz Que Vende
                   <Particles
                     refresh
                     ease={80}
                     quantity={30}
                     staticity={3}
-                    color="#ED9C9A"
+                    color="#9aceed"
                     className="hidden lg:block absolute inset-0 z-0"
                   />
                   <Particles
@@ -272,7 +277,7 @@ const LinktreePage = () => {
                     ease={80}
                     quantity={10}
                     staticity={3}
-                    color="#ED9C9A"
+                    color="#9aceed"
                     className="block lg:hidden absolute inset-0 z-0"
                   />
                 </button>
@@ -291,17 +296,17 @@ const LinktreePage = () => {
               onClick={() => {
                 handleLinkClick(
                   "Agendar Call Estratégica",
-                  "https://calendly.com/juancarlo8800/call-estrategica",
+                  "https://calendly.com/filippeneto/call-estrategica",
                   "button"
                 );
                 window.open(
-                  "https://calendly.com/juancarlo8800/call-estrategica",
+                  "https://calendly.com/filippeneto/call-estrategica",
                   "_blank"
                 );
               }}
               className="relative group w-full max-w-2xl mx-auto block"
             >
-              <div className="relative overflow-hidden bg-gradient-to-r from-[#FFFC82] to-[#ec979b] p-[1px] rounded-xl hover:scale-[102%] transition-all duration-300">
+              <div className="relative overflow-hidden bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] p-[1px] rounded-xl hover:scale-[102%] transition-all duration-300">
                 <div className="bg-black rounded-xl px-6 py-3 relative overflow-hidden">
                   <div className="flex items-center justify-center gap-3 relative z-10">
                     <Icon
@@ -317,7 +322,7 @@ const LinktreePage = () => {
                     ease={80}
                     quantity={15}
                     staticity={3}
-                    color="#ED9C9A"
+                    color="#9aceed"
                     className="absolute inset-0 z-0"
                   />
                 </div>
@@ -352,14 +357,14 @@ const LinktreePage = () => {
                     <Container
                       delay={0.1 + index * 0.1}
                       className={cn(
-                        "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#FFFB82]/20 to-[#EE9D99]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
+                        "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#E0EBEF]/20 to-[#8CDDFA]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
                       )}
                     >
                       <MagicCard
-                        gradientFrom="#FEF883"
-                        gradientTo="#FEA9AA"
+                        gradientFrom="#E0EBEF"
+                        gradientTo="#8CDDFA"
                         className="p-1 relative lg:rounded-3xl z-10"
-                        gradientColor="#FEA9AA10"
+                        gradientColor="#8CDDFA10"
                       >
                         {item.image && (
                           <img
@@ -384,7 +389,7 @@ const LinktreePage = () => {
                 ease={80}
                 staticity={3}
                 quantity={40}
-                color="#ED9C9A"
+                color="#9aceed"
                 className="hidden lg:block absolute inset-0 z-0"
               />
               <Particles
@@ -392,20 +397,20 @@ const LinktreePage = () => {
                 ease={80}
                 staticity={3}
                 quantity={50}
-                color="#ED9C9A"
+                color="#9aceed"
                 className="block lg:hidden absolute inset-0 z-0"
               />
             </motion.div>
           </div>
 
           {/* Seção Educação para jovens */}
-          <motion.div
+          {/*  <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-12 mb-8"
           >
-            <h2 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-[#FFFC82] to-[#f99d9c] text-transparent bg-clip-text text-center">
+            <h2 className="text-xl md:text-2xl font-bold mb-6 bg-gradient-to-r from-[#E0EBEF] to-[#8CDDFA] text-transparent bg-clip-text text-center">
               Educação para jovens
             </h2>
 
@@ -422,14 +427,14 @@ const LinktreePage = () => {
                   <Container
                     delay={0.1 + index * 0.1}
                     className={cn(
-                      "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#FFFB82]/20 to-[#EE9D99]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
+                      "relative flex flex-col max-w-[1480px] h-auto w-full p-[2px] rounded-2xl lg:rounded-2xl bg-gradient-to-r from-[#E0EBEF]/20 to-[#8CDDFA]/20 hover:border-border/100 cursor-pointer transition-colors aspect-[1480/690]"
                     )}
                   >
                     <MagicCard
-                      gradientFrom="#FEF883"
-                      gradientTo="#FEA9AA"
+                      gradientFrom="#E0EBEF"
+                      gradientTo="#8CDDFA"
                       className="p-1 relative lg:rounded-3xl z-10"
-                      gradientColor="#FEA9AA10"
+                      gradientColor="#8CDDFA10"
                     >
                       {item.image && (
                         <img
@@ -443,13 +448,18 @@ const LinktreePage = () => {
                 </Link>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </Wrapper>
 
       <div className="relative page-bottom mt-auto">
-        <p className="text-center font-sans mb-3 font-semibold text-xs text-[#EFA997] py-4 md:py-6">
-          Juan Carlo © 2026 - All Right Reserved
+        <p
+          onClick={() => {
+            window.open("https://filippneto.com.br", "_blank");
+          }}
+          className="text-center font-sans mb-3 font-semibold text-xs text-[#9aceed] py-4 md:py-6 cursor-pointer"
+        >
+          Developed by Juan Carlo © 2026 - All Right Reserved
         </p>
       </div>
 

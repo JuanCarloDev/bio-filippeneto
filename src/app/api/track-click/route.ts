@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     };
 
     // Criar mensagem para o Telegram
-    let message = `<b>🖱️ Clique Detectado - Juan Carlo AI</b>\n\n`;
+    let message = `<b>🖱️ Clique Detectado - Filippe Neto AI</b>\n\n`;
 
     // Emoji baseado no tipo
     const typeEmoji = {
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     )}...`;
 
     // Enviar notificação para o Telegram
-    await SendTelegramMessage(message, TelegramGroup.JUANCARLO);
+    /* await SendTelegramMessage(message, TelegramGroup.FILIPPENETO); */
 
     console.log("✅ Notificação de clique enviada para o Telegram");
 

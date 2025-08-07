@@ -6,7 +6,7 @@ Para o site funcionar completamente, você precisará adicionar as seguintes ima
 
 ### Perfil e Hero
 
-- `juan-carlo-profile.jpg` - Foto profissional do Juan Carlo (800x800px, formato quadrado)
+- `filippe-neto-profile.jpg` - Foto profissional do Filippe Neto (800x800px, formato quadrado)
 - `hero-bg.jpg` - Imagem de fundo para a seção hero (1920x1080px)
 - `og-image.jpg` - Imagem para compartilhamento em redes sociais (1200x630px)
 
@@ -48,7 +48,7 @@ Para o site funcionar completamente, você precisará adicionar as seguintes ima
 
 ### Foto Profissional
 
-- Foto atual do Juan Carlo em alta qualidade
+- Foto atual do Filippe Neto em alta qualidade
 - Fundo neutro ou que combine com o tema escuro do site
 - Expressão profissional e confiante
 

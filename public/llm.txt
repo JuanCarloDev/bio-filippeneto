@@ -1,94 +1,111 @@
-# Juan Carlo - Personal Website LLM Context
+# Filippe Neto - Mentor A Voz Que Vende | LLM Context
 
 ## Personal Information
-- Name: Juan Carlo
-- Age: 25 years old
+- Name: Filippe Neto
+- Age: 35 years old
 - Location: Balneário Camboriú, Santa Catarina, Brazil
-- Title: Fullstack Developer, CTO & AI Solutions Expert
-- Philosophy: "Create your life as the main player"
-- Contact: juancarlo8800@gmail.com | (41) 998768-9389
-- LinkedIn: linkedin.com/in/juancarlodev
-- GitHub: github.com/JuanCarloDev
-- Website: juancarlo.com.br
+- Title: Líder Visionário em Marketing e Vendas | Mentor A Voz Que Vende
+- Philosophy: "Transformar desafios em oportunidades e inspirar equipes a alcançar resultados extraordinários"
+- Contact: contato@filippneto.com.br | (47) 99999-9999
+- LinkedIn: linkedin.com/in/filippeneto
+- Instagram: @filippeneto.oficial
+- YouTube: @filippeneto
+- Website: filippneto.com.br
 
 ## Professional Profile
-Juan Carlo is a results-driven Fullstack Developer and Tech Leader with 9+ years of experience in technology, specializing in architecting scalable, high-performance web applications. He has a proven track record of driving significant business growth, including co-founding and scaling an EdTech startup from zero to $20M in revenue.
+Filippe Neto é um líder visionário em marketing e vendas com mais de 17 anos de experiência, especializado em transformar comunicação em máquinas de vendas. Sua paixão é conectar pessoas, explorar o poder dos dados e elevar o potencial humano. Com um histórico comprovado de revolucionar empresas e desenvolver talentos, Filippe transformou mais de 1700 vozes em ferramentas poderosas de geração de receita.
 
 ### Core Expertise
-- Frontend Development: React.js (5 years), Next.js (4 years), TypeScript (4 years), Tailwind CSS (3 years)
-- Backend Development: Node.js (4 years), Express.js, Fastify, REST APIs (5 years), GraphQL (2 years)
-- AI/ML Solutions: OpenAI API (2 years), Google Gemini (1 year), Vector Databases (1 year), LangChain (1 year)
-- Languages: Portuguese (Native), English (Advanced B2)
+- Marketing de Guerrilha: Estratégias disruptivas que geram impacto extraordinário
+- Branding: Posicionamento de marcas para dominância de mercado
+- Comunicação Persuasiva: Transformação de voz em máquina de vendas
+- Liderança de Vendas: Desenvolvimento de equipes de alta performance
+- CRM e Automação: Implementação de sistemas inteligentes de vendas
+- Mentoria Empresarial: Desenvolvimento de empresários e líderes
 
 ### Professional Experience
 
-#### Hive Technology - Founder, CTO & Fullstack Developer (Feb 2024 – Present)
-- Led a team of 10 professionals delivering fullstack AI solutions for international clients (USA & Japan)
-- Directed on-site technical operations in Los Angeles for project success and client satisfaction
-- Architected scalable backend systems that increased client operational efficiency by 40%
-- Generated R$740,000 in revenue in the first year
+#### Labellamafia - Diretor de Growth (2023 – Present)
+- Liderança de projetos de crescimento e inovação com estratégias revolucionárias
+- Implementação de marketing de guerrilha e branding para elevar a marca
+- Desenvolvimento de produtos de mentoria escaláveis
+- Posicionamento como referência em comunicação que vende
 
-#### Gonew.co - Cofounder, CTO & Fullstack Developer (Jun 2018 – Aug 2024)
-- Led all product engineering, scaling the company from 0 to $20M in revenue and 20,000+ users
-- Architected a high-impact LMS platform with AI-powered personalization and gamification features
-- Designed robust microservices architecture using Node.js to support thousands of concurrent users
-- Participated in Silicon Valley immersion program (2019) visiting Apple, LinkedIn, Google, Airbnb
+#### Fontes Promotora - Diretor (2020 – 2023)
+- Revolucionou o mercado de crédito consignado, tornando a empresa a maior do país em 2 anos
+- Implementação de CRM e IA aplicada à comunicação
+- Liderança de time comercial de alta performance
+- Resultados extraordinários em vendas e conversão
 
-#### Link Informática - Apple Technical Support Specialist (Jan 2016 – Jan 2018)
-- Provided expert hardware/software support for Apple devices
-- Achieved high customer satisfaction rates
+#### Audaces - Líder de Marketing Global (2018 – 2020)
+- Liderou estratégia de reposicionamento global da marca multinacional
+- Implementação de estratégias de marketing internacional
+- Reconhecimento por estratégias de engajamento de alto impacto
+- Expansão para mercados internacionais
+
+#### CityBlue - Diretor de Projetos (2015 – 2018)
+- Liderança de projetos notáveis com prêmios de excelência
+- Conquistou o Prêmio Oscar Scharape Sobrinho de Melhor Catálogo de Produto (2017)
+- Desenvolvimento de estratégias inovadoras
+- Reconhecimento nacional por resultados
 
 ### Key Achievements
-- $20M+ Revenue Scaled: Co-founded and scaled an EdTech startup
-- 3+ Companies Founded: As a technical Co-founder
-- 9+ Years in Tech: Global experience (USA, Japan)
-- Silicon Valley Immersion: Exclusive program at Google & Apple
-- Certified Private Pilot: Technical flight certification for private aircraft
+- 1700+ Vozes Libertadas: Transformou pessoas em máquinas de vendas
+- R$100M+ em Vendas Geradas: Através de estratégias revolucionárias
+- #1 Maior Consignado: Revolucionou a Fontes Promotora em apenas 2 anos
+- Co-fundador Consig Summit: Segundo maior evento financeiro do mundo
+- Personalidade de Marketing ADVB/SC (2022)
+- Profissional do Ano Revista Caras (2022)
 
 ### Current Projects
-1. **SevenSales AI Platform**: AI-powered sales automation platform with humanized AI agents for Instagram and WhatsApp
-2. **Silicon Valley Immersion Program**: Exclusive 5-day tech immersion program
-3. **Mentorship & Consulting**: Helping entrepreneurs scale with AI and technology
+1. **A Voz Que Vende - Imersão**: Evento exclusivo em Balneário Camboriú com Pablo Marçal
+2. **Mentoria A Voz Que Vende**: Programa exclusivo para transformar comunicação em vendas
+3. **Consig Summit**: Co-fundador do segundo maior evento financeiro do mundo
 
-### Values & Mindset
-- Core Values: God, Joy, Love, Intensity, Focus, Courage
-- Continuous growth and learning
-- Elimination of ego
-- Long-term vision focus
-- Courage to reinvest in the future
+### Awards & Recognition
+- Personalidade de Marketing (ADVB/SC, 2022)
+- Profissional de Marketing e Vendas do Ano (Revista Caras, 2022)
+- Prêmio Oscar Scharape Sobrinho - Melhor Catálogo (2017)
 
-### Technical Skills
-- **Frontend**: TypeScript, Next.js, React, JavaScript, Tailwind CSS
-- **Backend**: Node.js, GraphQL, Microservices
-- **Databases & DevOps**: PostgreSQL, MongoDB, Docker, CI/CD
-- **AI**: OpenAI, Google Gemini, OpenRouter, Langchain
+### Core Values & Methodology
+- Propósito: Transformar vidas através da comunicação eficaz
+- Excelência: Buscar sempre os melhores resultados
+- Inovação: Estar sempre à frente das tendências
+- Conexão: Criar relacionamentos autênticos e duradouros
+- Crescimento: Desenvolvimento contínuo pessoal e profissional
+- Impacto: Gerar resultados extraordinários e mensuráveis
+
+### Specialties
+- **Marketing**: Branding (17 anos), Marketing de Guerrilha (15 anos), Comunicação Persuasiva (17 anos)
+- **Vendas**: Técnicas de Persuasão (17 anos), Liderança de Vendas (15 anos), Conversão Digital (12 anos)
+- **Liderança**: Gestão de Equipes (15 anos), Desenvolvimento de Talentos (12 anos), Inovação Estratégica (15 anos)
 
 ### Goals & Vision
-- Financial: Building multiple revenue streams targeting R$50,000/month
-- Professional: Positioning as a reference in reconstruction and growth
-- Personal: Finding life partner, building family, spiritual growth
-- Material: Geographic freedom, Porsche 911, house near the sea
+- Impactar milhões de pessoas através da comunicação transformadora
+- Posicionar-se como a maior referência em "A Voz Que Vende" no Brasil
+- Expandir metodologias para mercados internacionais
+- Desenvolver a próxima geração de líderes em vendas e marketing
 
 ### Unique Positioning
-Juan Carlo is known for his courage to reinvest R$200,000+ in his own vision, demonstrating exceptional long-term thinking and commitment to growth. His experience includes international work, team leadership during challenging times, and the ability to scale companies from zero to millions in revenue.
+Filippe Neto é reconhecido por sua capacidade única de transformar comunicação em resultados financeiros concretos. Sua metodologia "A Voz Que Vende" já libertou mais de 1700 vozes, gerando mais de R$100 milhões em vendas. É uma autoridade nacional em marketing de guerrilha e possui reconhecimentos importantes como Personalidade de Marketing pela ADVB/SC e Profissional do Ano pela Revista Caras.
 
 ## SEO Keywords
-fullstack developer brazil, ai solutions expert, next.js developer, react specialist, cto consultant, startup cofounder, silicon valley experience, balneário camboriú developer, ai automation, sales technology, edtech experience, international clients, revenue growth, technical leadership
+mentor vendas brasil, comunicação que vende, marketing de guerrilha, branding expert, palestrante vendas, consultor marketing, liderança vendas, balneário camboriú mentor, a voz que vende, mentoria vendas, pablo marçal, consig summit, labellamafia growth, fontes promotora, transformação digital
 
 ## Content Topics
-- Web Development & Modern Technologies
-- AI Solutions & Implementation
-- Startup Growth & Scaling
-- Technical Leadership
-- International Business Experience
-- Silicon Valley Insights
-- React & Next.js Best Practices
-- AI-Powered Sales Automation
-- EdTech Innovation
-- Career Reconstruction & Growth
+- Comunicação Persuasiva & Técnicas de Vendas
+- Marketing de Guerrilha & Branding
+- Liderança de Equipes & Desenvolvimento de Talentos
+- Transformação Digital & CRM
+- Mentoria Empresarial & Crescimento de Negócios
+- Eventos & Networking Estratégico
+- Posicionamento Digital & Autoridade
+- Estratégias de Conversão & ROI
+- Desenvolvimento Pessoal & Profissional
+- Cultura Organizacional & Alta Performance
 
 ---
 Last Updated: January 2025
-Content Type: Personal Professional Website
-Target Audience: Potential clients, partners, employers, mentees
-Primary CTA: Contact for AI solutions, mentorship, or technical consulting 
+Content Type: Personal Professional Website - Mentor & Sales Leader
+Target Audience: Entrepreneurs, business leaders, sales professionals, marketing professionals, mentees
+Primary CTA: Contact for mentorship, consulting, or participation in "A Voz Que Vende" events 
